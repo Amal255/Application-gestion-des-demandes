@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Cours Complet Bootstrap 4</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <div
+    class="bg-image"
+    style="
+      background-image: url('https://us.123rf.com/450wm/tovovan/tovovan1703/tovovan170300033/73565301-fond-de-conception-mat%C3%A9rielle-abstraite-moderne-4k-fond-gris-estomp%C3%A9-pour-la-conception.jpg?ver=6');
+      height: 125vh;
+    ">
+    
+    <div class="container">
+     
+      <br><br>
+      <h2>Mes demandes</h2> <button class="btn btn-secondary" type="submit" (click)="Ajouterdmd()">Ajouter Demande</button> <br> <br>
+
+  
+      
+        <table class="table table-bordered border-dark">
+        <thead class="table-dark">
+          <tr>
+            <th>id</th>
+            <th>Document</th>
+            <th>Statut</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let demande of demandes">
+        
+            <td>{{demande.id_demande}}</td>
+            <td>{{demande.nom}}</td>
+            <td>{{demande.statut}}</td>
+            <td>         
+              <button (click) = "deleteDemande(demande.id_demande)" class = "btn btn-danger" style="margin-left: 10px"> Supprimer</button>
+            </td>
+            
+            
+          </tr>
+         
+        
+        </tbody>
+
+      </table>
+
+      
+   
+   
+  </div>
+  </div>
+   </body>
+   </html>   

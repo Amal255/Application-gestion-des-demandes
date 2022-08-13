@@ -1,0 +1,35 @@
+.active {
+    background-color: #4CAF50;
+}
+h2{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+tr{
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+thead{
+    background-color: darkgray;
+}
+table {
+    counter-reset: section;
+    background-color: white;
+  }
+  
+  .count:before {
+    counter-increment: section;
+    content: counter(section);
+  }
+
+  button{
+    background-color: gray;
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }

@@ -1,0 +1,37 @@
+<div
+    class="bg-image"
+    style="
+      background-image: url('https://us.123rf.com/450wm/tovovan/tovovan1703/tovovan170300033/73565301-fond-de-conception-mat%C3%A9rielle-abstraite-moderne-4k-fond-gris-estomp%C3%A9-pour-la-conception.jpg?ver=6');
+      height: 100vh;
+    ">
+<fieldset>
+  
+  <button type="button" class="btn btn-link" (click)="gotodemande()">&laquo; Retour</button>
+<div class="col-md-6 offset-md-3">
+    <form [formGroup]="Formulaire" (ngSubmit)="onSubmit()" >
+      <legend> Création demande </legend><br><br>
+        
+        
+        <label ><strong>Documents:</strong></label>
+          <select name="utilise" id="utilise" >
+            <option *ngFor="let document of documents" id="id_doc">{{document.typedoc}}</option>
+            
+            </select> <br>
+           
+              <label><strong> Commentez </strong>  </label> <br>
+              <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+              
+              </textarea><br> <br><br>
+              
+            
+    <div>
+        <button class="btn btn-success" type="submit" (click)="Adddemande()" >Ajouter</button>
+        <button input type="reset" value="Reset" class = "btn btn-danger" style="margin-left: 10px"> Annuler </button>
+    </div>
+    </form>
+
+    </div>
+    </fieldset>
+
+    
+    </div>

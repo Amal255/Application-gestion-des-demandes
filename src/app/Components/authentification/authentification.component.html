@@ -1,0 +1,47 @@
+<div class="container">
+  <div
+  class="bg-image"
+  style="
+    background-image: url('https://us.123rf.com/450wm/tovovan/tovovan1703/tovovan170300033/73565301-fond-de-conception-mat%C3%A9rielle-abstraite-moderne-4k-fond-gris-estomp%C3%A9-pour-la-conception.jpg?ver=6');
+    height: 125vh;
+    
+  ">
+
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;" style="box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);">
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-5 mt-md-4 pb-5">
+
+              <h2 class="fw-bold mb-2 text-uppercase">Authentification</h2>
+              <p class="text-white-50 mb-5">Entrez votre login et mot de passe</p>
+              
+              <div class="form-outline form-white mb-4" *ngIf="root">
+                <input type="login" id="login" class="form-control form-control-lg"  placeholder="Login" 
+                minlength="5"
+                maxlength="20"
+                pattern="company abc"
+                required>
+              </div>
+              
+              <div class="form-outline form-white mb-4">
+                <input type="password" id="password" class="form-control form-control-lg" placeholder="Mot de passe"  /> 
+              </div>
+
+              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Mot de passe oublié</a></p>
+
+
+              <button class="btn btn-outline-light btn-lg px-5" type="submit" (click)="goToDemade()" >Connexion</button>
+
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>

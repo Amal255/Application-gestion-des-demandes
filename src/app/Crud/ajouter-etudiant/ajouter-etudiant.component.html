@@ -1,0 +1,42 @@
+<div class="col-md-6 offset-md-3">
+<h1> Inscription</h1>
+<form [formGroup]="Formulaire" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Nom</label>
+        <input type ="text" class="form-control" id="nom" 
+        formControlName="nom" name="nom">
+    </div>
+
+    <div class="form-group">
+        <label>Prenom</label>
+        <input type ="text" class="form-control" id="prenom" 
+        formControlName="prenom" name="prenom">
+    </div>
+
+    <div class="form-group">
+        <label>Matricule</label>
+        <input type ="text" class="form-control" id="matricule" 
+        formControlName="matricule" name="matricule">
+    </div>
+
+    <div class="form-group">
+        <label>login</label>
+        <input type ="text" class="form-control" id="login" 
+        formControlName="login" name="login">
+    </div>
+
+    <div class="form-group">
+        <label>mdp</label>
+        <input type ="text" class="form-control" id="mdp" 
+        formControlName="mdp" name="mdp">
+    </div>
+
+    <div class="form-group">
+        <label>groupe</label>
+        <input type ="text" class="form-control" id="groupe" 
+        formControlName="groupe" name="groupe">
+    </div>
+
+    <button class="btn btn-success" type="submit" (click)="AddEtudiant()">Submit</button>
+</form>
+</div>
