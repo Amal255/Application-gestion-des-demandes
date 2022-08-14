@@ -9,9 +9,11 @@ import { EtudiantComponent } from './Components/etudiant/etudiant.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListeDemandesComponent } from './Crud/liste-demandes/liste-demandes.component';
 import { AjouterEtudiantComponent } from './Crud/ajouter-etudiant/ajouter-etudiant.component';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AjouterDemandeComponent } from './Crud/ajouter-demande/ajouter-demande.component';
 import { LesDemandesComponent } from './Crud/les-demandes/les-demandes.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,10 @@ import { LesDemandesComponent } from './Crud/les-demandes/les-demandes.component
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    RouterModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

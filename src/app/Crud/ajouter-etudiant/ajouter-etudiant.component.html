@@ -1,42 +1,73 @@
 <div class="col-md-6 offset-md-3">
-<h1> Inscription</h1>
-<form [formGroup]="Formulaire" (ngSubmit)="onSubmit()">
+<br>
+<form [formGroup]="Formulaire"  *ngIf="!isLoggedIn"
+name="form"
+(ngSubmit)="f.form.valid && onSubmit()"
+#f="ngForm"
+novalidate>
+    <legend> Inscription </legend><br><br>
     <div class="form-group">
-        <label>Nom</label>
+
+        <label><strong>Nom</strong></label>
         <input type ="text" class="form-control" id="nom" 
-        formControlName="nom" name="nom">
+        formControlName="nom"   name="nom"
+        required
+        minlength="3" maxlength="20">
+       
     </div>
 
+
+
     <div class="form-group">
-        <label>Prenom</label>
+        <label><strong>Prénom</strong></label>
         <input type ="text" class="form-control" id="prenom" 
-        formControlName="prenom" name="prenom">
+        formControlName="prenom" name="prenom"
+        required
+        minlength="3" maxlength="20">
     </div>
 
     <div class="form-group">
-        <label>Matricule</label>
-        <input type ="text" class="form-control" id="matricule" 
-        formControlName="matricule" name="matricule">
-    </div>
-
-    <div class="form-group">
-        <label>login</label>
-        <input type ="text" class="form-control" id="login" 
-        formControlName="login" name="login">
-    </div>
-
-    <div class="form-group">
-        <label>mdp</label>
-        <input type ="text" class="form-control" id="mdp" 
-        formControlName="mdp" name="mdp">
-    </div>
-
-    <div class="form-group">
-        <label>groupe</label>
+        <label><strong>Groupe</strong></label>
         <input type ="text" class="form-control" id="groupe" 
         formControlName="groupe" name="groupe">
     </div>
 
-    <button class="btn btn-success" type="submit" (click)="AddEtudiant()">Submit</button>
+    <div class="form-group">
+        <label><strong>Login</strong></label>
+        <input type ="text" class="form-control" id="login" 
+        formControlName="login" name="login"
+        required
+        minlength="5" maxlength="20">
+    </div>
+
+    <div class="form-group">
+        <label><strong>Mot de passe</strong></label>
+        <input type="password" class="form-control" id="mdp" 
+        formControlName="mdp" name="mdp"
+        required
+        minlength="8" maxlength="20">
+       
+    </div>
+
+    <div class="form-group">
+        <label><strong>Confirmer Mot de passe</strong></label>
+        <input type="password" class="form-control" id="confirmermdp" 
+        formControlName="mdp" name="mdp"
+        required
+        minlength="8" maxlength="20" pattern="{{etudiant.mdp}}">
+        
+    </div>
+
+    <button class="btn btn-success" type="submit" (click)="AddEtudiant()">Confirmer</button>
+
+    <div class="form-group">
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="f.submitted && isLoginFailed"
+        >
+          Login failed: {{ errorMessage }}
+        </div>
+    </div>
 </form>
 </div>

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AuthentificationComponent implements OnInit {
 
   root=true;
+ 
   constructor(private route:Router) { }
 
   ngOnInit(): void {

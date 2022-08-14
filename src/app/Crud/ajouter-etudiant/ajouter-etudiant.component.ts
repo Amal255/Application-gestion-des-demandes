@@ -13,6 +13,12 @@ export class AjouterEtudiantComponent implements OnInit {
 
   etudiant:Etudiant=new Etudiant();
   Formulaire:FormGroup;
+  isLoggedIn=false;
+  isLoginFailed = false;
+  errorMessage = '';
+  
+
+  
   constructor(private etudiantService:EtudiantService,
     private router :Router) { }
 
@@ -23,7 +29,8 @@ export class AjouterEtudiantComponent implements OnInit {
       nom: new FormControl(),
       prenom: new FormControl(),
       groupe: new FormControl(),
-      matricule: new FormControl()
+      matricule:new FormControl()
+      
     })
 
   }
@@ -45,9 +52,12 @@ onSubmit(){
     console.log(this.etudiant);
     this.etudiant.nom  = this.Formulaire.value.nom;
     this.etudiant.prenom  = this.Formulaire.value.prenom;
-    this.etudiant.matricule  = this.Formulaire.value.matricule;
+    this.etudiant.matricule=this.Formulaire.value.matricule;
     this.etudiant.login  = this.Formulaire.value.login;
     this.etudiant.mdp  = this.Formulaire.value.mdp;
+    this.etudiant.groupe=this.Formulaire.value.groupe;
+    this.isLoginFailed = false;
+    this.isLoggedIn = true;
     
 
   }
